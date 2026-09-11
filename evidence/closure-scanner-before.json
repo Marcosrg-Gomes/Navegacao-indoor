@@ -1,0 +1,238 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor\\admin-panel\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/scanner.spec.ts",
+      "--project=chromium"
+    ],
+    "configFile": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor\\admin-panel\\playwright.config.ts",
+    "rootDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/evidence/final-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/evidence/final-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/evidence/final-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/evidence/final-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/evidence/final-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "msedge",
+        "name": "msedge",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../evidence/closure-scanner-before.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "scanner.spec.ts",
+      "file": "scanner.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Scanner aceita outra leitura após voltar à aba (eventos simulados)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "browser-version",
+                  "description": "chromium 153.0.8010.12 (win32)"
+                },
+                {
+                  "type": "scope",
+                  "description": "Vídeo sintético e decoder simulado; não valida leitura óptica nem câmera física."
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7795,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('origin-label')\nExpected substring: \u001b[32m\"Livraria Superior\"\u001b[39m\nReceived string:    \u001b[31m\"📍 Entrada Principal\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('origin-label') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('origin-label')\u001b[22m\n\u001b[2m    14 × locator resolved to <div dir=\"auto\" data-testid=\"origin-label\" class=\"css-146c3p1 r-1syucbw r-ubezar r-1kfrs79\">📍 Entrada Principal</div>\u001b[22m\n\u001b[2m       - unexpected value \"📍 Entrada Principal\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('origin-label')\nExpected substring: \u001b[32m\"Livraria Superior\"\u001b[39m\nReceived string:    \u001b[31m\"📍 Entrada Principal\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('origin-label') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('origin-label')\u001b[22m\n\u001b[2m    14 × locator resolved to <div dir=\"auto\" data-testid=\"origin-label\" class=\"css-146c3p1 r-1syucbw r-ubezar r-1kfrs79\">📍 Entrada Principal</div>\u001b[22m\n\u001b[2m       - unexpected value \"📍 Entrada Principal\"\u001b[22m\n\n    at C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor\\admin-panel\\tests\\scanner.spec.ts:45:50",
+                    "location": {
+                      "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor\\admin-panel\\tests\\scanner.spec.ts",
+                      "column": 50,
+                      "line": 45
+                    },
+                    "snippet": "  43 |   await page.evaluate(() => { (window as Window & { auditQrToken: string }).auditQrToken = \"DESTINO-SUPERIOR\"; });\n  44 |   await page.getByRole(\"button\", { name: \"Escanear QR\", exact: true }).click();\n> 45 |   await expect(page.getByTestId(\"origin-label\")).toContainText(\"Livraria Superior\");\n     |                                                  ^\n  46 |   await expect(page.getByText(\"Mapa: Piso superior\", { exact: true })).toBeVisible();\n  47 | });\n  48 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor\\admin-panel\\tests\\scanner.spec.ts",
+                        "column": 50,
+                        "line": 45
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('origin-label')\nExpected substring: \u001b[32m\"Livraria Superior\"\u001b[39m\nReceived string:    \u001b[31m\"📍 Entrada Principal\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('origin-label') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('origin-label')\u001b[22m\n\u001b[2m    14 × locator resolved to <div dir=\"auto\" data-testid=\"origin-label\" class=\"css-146c3p1 r-1syucbw r-ubezar r-1kfrs79\">📍 Entrada Principal</div>\u001b[22m\n\u001b[2m       - unexpected value \"📍 Entrada Principal\"\u001b[22m\n\n\n  43 |   await page.evaluate(() => { (window as Window & { auditQrToken: string }).auditQrToken = \"DESTINO-SUPERIOR\"; });\n  44 |   await page.getByRole(\"button\", { name: \"Escanear QR\", exact: true }).click();\n> 45 |   await expect(page.getByTestId(\"origin-label\")).toContainText(\"Livraria Superior\");\n     |                                                  ^\n  46 |   await expect(page.getByText(\"Mapa: Piso superior\", { exact: true })).toBeVisible();\n  47 | });\n  48 |\n    at C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor\\admin-panel\\tests\\scanner.spec.ts:45:50"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-11T00:53:38.840Z",
+                  "annotations": [
+                    {
+                      "type": "browser-version",
+                      "description": "chromium 153.0.8010.12 (win32)"
+                    },
+                    {
+                      "type": "scope",
+                      "description": "Vídeo sintético e decoder simulado; não valida leitura óptica nem câmera física."
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor\\evidence\\final-browser-artifacts\\scanner-Scanner-aceita-out-06811-ar-à-aba-eventos-simulados--chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor\\evidence\\final-browser-artifacts\\scanner-Scanner-aceita-out-06811-ar-à-aba-eventos-simulados--chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor\\admin-panel\\tests\\scanner.spec.ts",
+                    "column": 50,
+                    "line": 45
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b2073bc353b71da2b6f2-28abc380044daf61d2b0",
+          "file": "scanner.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-11T00:53:37.759Z",
+    "duration": 9768.482,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

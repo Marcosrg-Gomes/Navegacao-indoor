@@ -1,0 +1,25 @@
+{
+  "profile": "4G simulado: 9 Mbps down / 1 Mbps up / 80 ms, cache frio, Chromium, 360x640",
+  "samples": [
+    {
+      "mapMs": 1951,
+      "routeMs": 633
+    },
+    {
+      "mapMs": 2221,
+      "routeMs": 649
+    },
+    {
+      "mapMs": 2023,
+      "routeMs": 740
+    },
+    {
+      "mapMs": 2189,
+      "routeMs": 738
+    },
+    {
+      "mapMs": 2223,
+      "routeMs": 740
+    }
+  ]
+}

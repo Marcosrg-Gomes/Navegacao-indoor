@@ -1,0 +1,35 @@
+# Created by .ignore support plugin (hsz.mobi)
+### JetBrains template
+data/
+dist/
+indrz/data/
+indrz/settings/.env
+
+indrz.egg-info/
+*.iml
+
+*.env
+.env
+.venv/*
+.venv
+
+## Directory-based project format:
+.idea/
+# if you remove the above rule, at least ignore the following:
+
+*.pyc
+.pytest_cache
+/indrz/logs/
+/indrz/htmlcov/
+indrz/media
+indrz/static
+
+/.cache/
+
+*.cache
+*.coverage
+*.log
+
+docs/node_modules
+frontend/node_modules
+node_modules

@@ -1,0 +1,16 @@
+stages: [lint, version, tag, release, changelog, test, build, depoy]
+
+# Child pipelines for backend and frontend
+include:
+  - local: .gitlab-ci.backend.yml
+  - local: .gitlab-ci.frontend.yml
+
+# Optional: a quick sanity lint that always runs
+yamllint:
+  stage: lint
+  image: python:3.12-slim
+  rules:
+    - when: always
+  script:
+    - pip install --no-cache-dir yamllint
+    - yamllint -d "{extends: default, rules: {line-length: {max: 140}}}" .

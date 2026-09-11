@@ -1,0 +1,112 @@
+networks:
+  indrz-net-os:
+
+volumes:
+  os-db-data:
+  indrz-static:
+  indrz-media:
+  geoserver-data:
+
+services:
+  indrz_db:
+    hostname: indrz_db
+    container_name: indrz_db
+    image: kartoza/postgis:15-3.3
+    volumes:
+      - os-db-data:/var/lib/postgresql
+    ports:
+      - 5432:5432
+    env_file:
+      .env
+    restart: on-failure
+    networks:
+      - indrz-net-os
+    healthcheck:
+      test: "PGPASSWORD=${POSTGRES_PASS} pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB} -h ${POSTGRES_HOST} -p ${POSTGRES_PORT"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  indrz_api:
+    container_name: indrz_api
+    image: indrz-os/api:3.1.2
+    build:
+      context: .
+      dockerfile: ./devops/docker/local/indrz_api/Dockerfile
+    # command: bash -c "python manage.py migrate && python manage.py collectstatic --no-input --clear && python manage.py runserver  0.0.0.0:8000"
+    ports:
+      - 8000:8000
+    depends_on:
+      indrz_db:
+        condition: service_healthy
+    volumes:
+      - ./backend/indrz:/app
+      - ./backend/data/media:/opt/data/media
+      - ./backend/data/static:/opt/data/static
+      - ./backend/data/logs:/opt/data/logs
+      - ./backend/data/temp_dwg:/opt/data/temp_dwg
+      - ./backend/data/src_dwg:/opt/data/src_dwg
+    restart: always
+    networks:
+      - indrz-net-os
+    env_file:
+      - .env
+  # GEOSERVER
+  geoserver:
+    build:
+      context: .
+      dockerfile: ./devops/docker/local/geoserver/Dockerfile
+    container_name: geoserver
+    image: indrz-os/geoserver:2.27.0
+    volumes:
+      - geoserver-data:/opt/geoserver/data_dir
+    ports:
+      - 8080:8080
+    restart: on-failure
+    networks:
+      - indrz-net-os
+    env_file:
+     - .env
+    depends_on:
+      indrz_db:
+        condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent --write-out 'HTTP CODE : %{http_code}\n' --output /dev/null -u ${GEOSERVER_ADMIN_USER}:'${GEOSERVER_ADMIN_PASSWORD}' http://localhost:8080/geoserver/rest/about/version.xml"
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+   #nuxt frontend
+  frontend:
+    build:
+      context: .
+      dockerfile: ./devops/docker/local/frontend/Dockerfile
+    container_name: frontend
+    image: indrz-os/frontend:latest
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app
+      - /frontend/app/node_modules
+    command:
+      "npm run dev"
+    networks:
+      - indrz-net-os
+  nginx:
+    build:
+      context: .
+      dockerfile: ./devops/docker/local/nginx/Dockerfile
+    container_name: nginx
+    hostname: nginx
+    image: indrz-os/nginx:latest
+    volumes:
+      - ./backend/data/static:/opt/data/static
+      - ./backend/data/media:/opt/data/media
+    ports:
+      - "80:80"
+    networks:
+      - indrz-net-os
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - indrz_api
