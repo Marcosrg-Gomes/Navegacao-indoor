@@ -12,6 +12,27 @@ dist-native/
 test-results/
 playwright-report/
 
+# Android / Gradle / Expo native exports
+.gradle/
+**/.gradle/
+**/build/
+**/.cxx/
+**/.kotlin/
+**/captures/
+**/local.properties
+*.apk
+*.aab
+*.apks
+*.aar
+*.dex
+*.hprof
+*.keystore
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+distill.exe
+
 # Node
 node_modules/
 dist/

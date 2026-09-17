@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    name: Backend (${{ matrix.database }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        database: [sqlite, mysql]
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_DATABASE: navegacao_indoor_test
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -proot"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+    env:
+      TEST_DATABASE_URL: ${{ matrix.database == 'mysql' && 'mysql+pymysql://root:root@127.0.0.1:3306/navegacao_indoor_test' || '' }}
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: pytest tests/ -v
+
+  frontends-and-e2e:
+    name: Frontends and E2E
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: |
+            mobile/package-lock.json
+            admin-panel/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Typecheck and build mobile web export
+        working-directory: mobile
+        run: |
+          npm ci
+          npm run typecheck
+          npm run build:web
+      - name: Build admin panel
+        working-directory: admin-panel
+        run: |
+          npm ci
+          npm run build
+      - name: Install Python dependencies for audit server
+        working-directory: backend
+        run: pip install -r requirements.txt
+      - name: Install Chromium
+        working-directory: admin-panel
+        run: npx playwright install --with-deps chromium
+      - name: Run available Chromium E2E flows
+        working-directory: admin-panel
+        run: |
+          python ../backend/audit_server.py --port 8765 > ../audit-server.log 2>&1 &
+          server_pid=$!
+          trap 'kill $server_pid' EXIT
+          for attempt in $(seq 1 20); do curl --fail --silent http://127.0.0.1:8765/health && break; sleep 1; done
+          curl --fail --silent http://127.0.0.1:8765/health
+          npm run test:e2e -- --project=chromium tests/navigation.spec.ts tests/scanner.spec.ts tests/admin-crud.spec.ts tests/multiuser.spec.ts

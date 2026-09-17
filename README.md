@@ -2,6 +2,13 @@
 
 Sistema de navegação indoor para shopping centers baseado em QR Codes, mapas 2D e roteamento via Dijkstra.
 
+## Implementação oficial e homologação
+
+O produto integrado está exclusivamente em `backend/`, `mobile/` e
+`admin-panel/`; as demais pastas de projetos são referências. Os gates de CI,
+homologação MySQL e os requisitos que ainda dependem de dispositivos, rede e
+participantes estão definidos em [IMPLEMENTACAO_OFICIAL.md](IMPLEMENTACAO_OFICIAL.md).
+
 ## Requisitos
 
 - Python 3.11+
@@ -99,12 +106,20 @@ Em outro terminal:
 ```bash
 cd admin-panel
 npx playwright install chromium firefox webkit
-npm run test:e2e -- tests/navigation.spec.ts
 ```
 
 A configuração inclui Chromium, Firefox e WebKit do Playwright, além dos canais `chrome` e `msedge`, que exigem os respectivos navegadores instalados. Se um canal não existir, registre a lacuna; não interprete teste não executado como aprovado. Para executar apenas um alvo, acrescente `--project=chromium` (ou outro nome).
 
-Para preservar relatórios anteriores no PowerShell, defina `$env:AUDIT_REPORT='../evidence/final-browser-tests.json'` antes do comando. A suíte de navegação não repete o RNF03. O teste de performance está em `tests/performance.spec.ts`; seu perfil e os resultados históricos estão descritos na auditoria.
+Para preservar relatórios, screenshots e traces anteriores no PowerShell, use um identificador novo em cada execução:
+
+```powershell
+$env:AUDIT_PHASE = 'manual-' + (Get-Date -Format 'yyyyMMdd-HHmmss')
+$env:AUDIT_REPORT = "../evidence/$env:AUDIT_PHASE-browser-tests.json"
+$env:AUDIT_ARTIFACTS = "../evidence/$env:AUDIT_PHASE-browser-artifacts"
+npm run test:e2e -- tests/navigation.spec.ts
+```
+
+A suíte de navegação não repete o RNF03. O teste de performance está em `tests/performance.spec.ts`; seu perfil e os resultados históricos estão descritos na auditoria. `tests/scanner.spec.ts` verifica a releitura ao retornar à aba com vídeo/decoder simulados apenas no Chromium.
 
 Os testes E2E simulam entrada por link/token QR e confirmação manual de chegada. Leitura óptica com câmera e execução nativa requerem validação em dispositivos. A matriz das duas últimas versões de Chrome, Safari, Firefox e Edge e o teste com cinco usuários continuam pendentes.
 
@@ -180,3 +195,7 @@ navegacao-indoor/
 | 4 | Visualização 3D (opcional) | Fora desta entrega; não implementada |
 
 As Fases 1–3 ainda não têm aceite integral para congelamento. Consulte a matriz de requisitos, resultados e pendências em [AUDITORIA_FASES_1-3.md](AUDITORIA_FASES_1-3.md) e as decisões técnicas em [DECISOES.md](DECISOES.md).
+
+Consolidação de 12/09/2026: a última rodada registrada em 10/09 tem **88 testes Python aprovados** e **26 E2E aprovados, 4 pulados, 0 falhas**. Nesta retomada foram conferidas as evidências existentes, sem repetir testes/builds. Os anexos comprovam rota entre pisos e o ciclo bloquear → recalcular alternativa → reativar (61 → 85 → 61 m). RNF03 tem cinco amostras históricas em 4G simulado, máximos de 2222 ms para mapa e 756 ms para rota. RNF08 é parcial/pendente, nunca N/A; RNF09 permanece pendente.
+
+O aviso de hook não foi atribuído ao pre-commit: não há hook Git ativo na raiz. Foram reproduzidas falhas do lançador de hooks do Token Optimizer sob PowerShell e do alias WSL sem distribuição. O vínculo com o evento original e a correção integrada no Codex permanecem não verificados. Veja o diagnóstico na auditoria e a reprodução `python evidence/verify_hook_launcher.py`, que registra stdout/stderr/exit codes sem alterar hooks ou configuração global.

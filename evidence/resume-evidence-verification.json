@@ -1,0 +1,452 @@
+{
+  "verified_at_utc": "2026-09-13T02:43:29.843786+00:00",
+  "scope": "Inspection of existing reports, not a new application test run",
+  "sources": {
+    "closure-browser-tests.json": "71d136ce4e02378d9de48797e2f5392e7e7c6320752c65a38c662b4ffa2a199a",
+    "closure-pytest.xml": "c5cdcc03948cf27fe75905f02612abfc48a8d1b3ddb7b4e6b7097c79d9fa33e8",
+    "browser-tests.json": "081eaece1f04390936dd3a16dd2208ad8874b086e9599067d91816e57213c9aa",
+    "performance-after.json": "3d3bcbe0eda97fb338942455b387d610d7486f0993579f3e63f1868a72795c49",
+    "closure-scanner-before.json": "1012b0dad93773dbd9378b615c8d3357a6ca390b68fc7e0c9f200281e45dc51b"
+  },
+  "browser_matrix": {
+    "chromium": "chromium 153.0.8010.12 (win32)",
+    "firefox": "firefox 155.0 (win32)",
+    "webkit": "webkit 26.6 (win32)",
+    "chrome": "chrome 152.0.7977.83 (win32)",
+    "msedge": "msedge 152.0.4191.66 (win32)"
+  },
+  "edge_cycles": {
+    "chromium": {
+      "original": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 61
+      },
+      "blocked": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          13,
+          14,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 85
+      },
+      "restored": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 61
+      }
+    },
+    "firefox": {
+      "original": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 61
+      },
+      "blocked": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          13,
+          14,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 85
+      },
+      "restored": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 61
+      }
+    },
+    "webkit": {
+      "original": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 61
+      },
+      "blocked": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          13,
+          14,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 85
+      },
+      "restored": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 61
+      }
+    },
+    "chrome": {
+      "original": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 61
+      },
+      "blocked": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          13,
+          14,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 85
+      },
+      "restored": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 61
+      }
+    },
+    "msedge": {
+      "original": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 61
+      },
+      "blocked": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          13,
+          14,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 85
+      },
+      "restored": {
+        "node_ids": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          11,
+          17
+        ],
+        "distance_m": 61
+      }
+    }
+  },
+  "multi_floor_routes": {
+    "chromium:multi-floor-360": {
+      "node_ids": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        23,
+        24,
+        26
+      ],
+      "transitions": [
+        [
+          23,
+          24
+        ]
+      ],
+      "distance_m": 118
+    },
+    "chromium:multi-floor-414": {
+      "node_ids": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        23,
+        24,
+        26
+      ],
+      "transitions": [
+        [
+          23,
+          24
+        ]
+      ],
+      "distance_m": 118
+    },
+    "firefox:multi-floor-360": {
+      "node_ids": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        23,
+        24,
+        26
+      ],
+      "transitions": [
+        [
+          23,
+          24
+        ]
+      ],
+      "distance_m": 118
+    },
+    "firefox:multi-floor-414": {
+      "node_ids": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        23,
+        24,
+        26
+      ],
+      "transitions": [
+        [
+          23,
+          24
+        ]
+      ],
+      "distance_m": 118
+    },
+    "webkit:multi-floor-360": {
+      "node_ids": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        23,
+        24,
+        26
+      ],
+      "transitions": [
+        [
+          23,
+          24
+        ]
+      ],
+      "distance_m": 118
+    },
+    "webkit:multi-floor-414": {
+      "node_ids": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        23,
+        24,
+        26
+      ],
+      "transitions": [
+        [
+          23,
+          24
+        ]
+      ],
+      "distance_m": 118
+    },
+    "chrome:multi-floor-360": {
+      "node_ids": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        23,
+        24,
+        26
+      ],
+      "transitions": [
+        [
+          23,
+          24
+        ]
+      ],
+      "distance_m": 118
+    },
+    "chrome:multi-floor-414": {
+      "node_ids": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        23,
+        24,
+        26
+      ],
+      "transitions": [
+        [
+          23,
+          24
+        ]
+      ],
+      "distance_m": 118
+    },
+    "msedge:multi-floor-360": {
+      "node_ids": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        23,
+        24,
+        26
+      ],
+      "transitions": [
+        [
+          23,
+          24
+        ]
+      ],
+      "distance_m": 118
+    },
+    "msedge:multi-floor-414": {
+      "node_ids": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        23,
+        24,
+        26
+      ],
+      "transitions": [
+        [
+          23,
+          24
+        ]
+      ],
+      "distance_m": 118
+    }
+  },
+  "browser_stats": {
+    "startTime": "2026-09-11T00:54:42.839Z",
+    "duration": 95195.469,
+    "expected": 26,
+    "skipped": 4,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "pytest": [
+    {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "88",
+      "time": "3.849",
+      "timestamp": "2026-09-10T21:53:36.316714-03:00",
+      "hostname": "Marquinhos"
+    }
+  ],
+  "performance": {
+    "profile": "4G simulado: 9 Mbps down / 1 Mbps up / 80 ms, cache frio, Chromium, 360x640",
+    "samples": [
+      {
+        "mapMs": 2218,
+        "routeMs": 756
+      },
+      {
+        "mapMs": 2197,
+        "routeMs": 686
+      },
+      {
+        "mapMs": 2222,
+        "routeMs": 656
+      },
+      {
+        "mapMs": 2102,
+        "routeMs": 649
+      },
+      {
+        "mapMs": 2200,
+        "routeMs": 672
+      }
+    ]
+  }
+}

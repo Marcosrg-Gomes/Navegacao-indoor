@@ -1,0 +1,88 @@
+{
+  "executed_at_utc": "2026-09-13T02:43:02.434937+00:00",
+  "scope": "Manual subprocess reproduction; original Codex event not available",
+  "source": "C:\\Users\\marco\\.codex\\plugins\\cache\\alexgreensh-token-optimizer\\token-optimizer\\5.13.12\\hooks\\hooks.json",
+  "sha256": "1b1aa6f4570cfac6d24c9522958c2bbb8f64d4a2ee0d19e3b5444be1aebc486f",
+  "powershell_probes": [
+    {
+      "event": "PreToolUse",
+      "matcher": "Bash",
+      "argv": [
+        "powershell.exe",
+        "-NoProfile",
+        "-Command",
+        "for b in bash /bin/bash /usr/bin/bash /usr/local/bin/bash /opt/homebrew/bin/bash; do command -v \"$b\" >/dev/null 2>&1 || continue; D=\"${CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || D=\"$(ls -d \"${D%/*}\"/*/ 2>/dev/null | grep -E \"/[0-9]+[.][0-9]+[.][0-9]+/$\" | sort -V | tail -n1)\"; D=\"${D%/}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || exit 0; exec \"$b\" \"$D/hooks/python-launcher.sh\" \"$D/hooks/run.py\" skills/token-optimizer/scripts/bash_hook.py --quiet; done; exit 0"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "No linha:1 caractere:4\r\n+ for b in bash /bin/bash /usr/bin/bash /usr/local/bin/bash /opt/homebr ...\r\n+    ~\r\n'(' de abertura ausente ap�s a palavra-chave 'for'.\r\nNo linha:1 caractere:85\r\n+ ...  /usr/bin/bash /usr/local/bin/bash /opt/homebrew/bin/bash; do command ...\r\n+                                                                  ~\r\nCorpo de instru��o ausente no loop do.\r\nNo linha:1 caractere:118\r\n+ ... /opt/homebrew/bin/bash; do command -v \"$b\" >/dev/null 2>&1 || continu ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\nNo linha:1 caractere:159\r\n+ ... $b\" >/dev/null 2>&1 || continue; D=\"${CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/ ...\r\n+                                                                  ~\r\nNome de tipo ausente depois de '['.\r\nNo linha:1 caractere:195\r\n+ ... CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || D=\"$(ls ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\nNo linha:1 caractere:311\r\n+ ... ]+[.][0-9]+[.][0-9]+/$\" | sort -V | tail -n1)\"; D=\"${D%/}\"; [ -r \"$D/ ...\r\n+                                                                  ~\r\nNome de tipo ausente depois de '['.\r\nNo linha:1 caractere:347\r\n+ ... il -n1)\"; D=\"${D%/}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || exit 0; ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\n    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException\r\n    + FullyQualifiedErrorId : MissingOpenParenthesisAfterKeyword\r\n \r\n"
+    },
+    {
+      "event": "PostToolUse",
+      "matcher": "Bash|Read|Glob|Grep|Agent|Edit|Write|MultiEdit|NotebookEdit|mcp__.*",
+      "argv": [
+        "powershell.exe",
+        "-NoProfile",
+        "-Command",
+        "for b in bash /bin/bash /usr/bin/bash /usr/local/bin/bash /opt/homebrew/bin/bash; do command -v \"$b\" >/dev/null 2>&1 || continue; D=\"${CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || D=\"$(ls -d \"${D%/*}\"/*/ 2>/dev/null | grep -E \"/[0-9]+[.][0-9]+[.][0-9]+/$\" | sort -V | tail -n1)\"; D=\"${D%/}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || exit 0; exec \"$b\" \"$D/hooks/python-launcher.sh\" \"$D/hooks/run.py\" hooks/posttooluse_runner.py; done; exit 0"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "No linha:1 caractere:4\r\n+ for b in bash /bin/bash /usr/bin/bash /usr/local/bin/bash /opt/homebr ...\r\n+    ~\r\n'(' de abertura ausente ap�s a palavra-chave 'for'.\r\nNo linha:1 caractere:85\r\n+ ...  /usr/bin/bash /usr/local/bin/bash /opt/homebrew/bin/bash; do command ...\r\n+                                                                  ~\r\nCorpo de instru��o ausente no loop do.\r\nNo linha:1 caractere:118\r\n+ ... /opt/homebrew/bin/bash; do command -v \"$b\" >/dev/null 2>&1 || continu ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\nNo linha:1 caractere:159\r\n+ ... $b\" >/dev/null 2>&1 || continue; D=\"${CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/ ...\r\n+                                                                  ~\r\nNome de tipo ausente depois de '['.\r\nNo linha:1 caractere:195\r\n+ ... CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || D=\"$(ls ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\nNo linha:1 caractere:311\r\n+ ... ]+[.][0-9]+[.][0-9]+/$\" | sort -V | tail -n1)\"; D=\"${D%/}\"; [ -r \"$D/ ...\r\n+                                                                  ~\r\nNome de tipo ausente depois de '['.\r\nNo linha:1 caractere:347\r\n+ ... il -n1)\"; D=\"${D%/}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || exit 0; ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\n    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException\r\n    + FullyQualifiedErrorId : MissingOpenParenthesisAfterKeyword\r\n \r\n"
+    },
+    {
+      "event": "UserPromptSubmit",
+      "matcher": null,
+      "argv": [
+        "powershell.exe",
+        "-NoProfile",
+        "-Command",
+        "for b in bash /bin/bash /usr/bin/bash /usr/local/bin/bash /opt/homebrew/bin/bash; do command -v \"$b\" >/dev/null 2>&1 || continue; D=\"${CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || D=\"$(ls -d \"${D%/*}\"/*/ 2>/dev/null | grep -E \"/[0-9]+[.][0-9]+[.][0-9]+/$\" | sort -V | tail -n1)\"; D=\"${D%/}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || exit 0; exec \"$b\" \"$D/hooks/python-launcher.sh\" \"$D/hooks/run.py\" hooks/userpromptsubmit_runner.py; done; exit 0"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "No linha:1 caractere:4\r\n+ for b in bash /bin/bash /usr/bin/bash /usr/local/bin/bash /opt/homebr ...\r\n+    ~\r\n'(' de abertura ausente ap�s a palavra-chave 'for'.\r\nNo linha:1 caractere:85\r\n+ ...  /usr/bin/bash /usr/local/bin/bash /opt/homebrew/bin/bash; do command ...\r\n+                                                                  ~\r\nCorpo de instru��o ausente no loop do.\r\nNo linha:1 caractere:118\r\n+ ... /opt/homebrew/bin/bash; do command -v \"$b\" >/dev/null 2>&1 || continu ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\nNo linha:1 caractere:159\r\n+ ... $b\" >/dev/null 2>&1 || continue; D=\"${CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/ ...\r\n+                                                                  ~\r\nNome de tipo ausente depois de '['.\r\nNo linha:1 caractere:195\r\n+ ... CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || D=\"$(ls ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\nNo linha:1 caractere:311\r\n+ ... ]+[.][0-9]+[.][0-9]+/$\" | sort -V | tail -n1)\"; D=\"${D%/}\"; [ -r \"$D/ ...\r\n+                                                                  ~\r\nNome de tipo ausente depois de '['.\r\nNo linha:1 caractere:347\r\n+ ... il -n1)\"; D=\"${D%/}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || exit 0; ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\n    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException\r\n    + FullyQualifiedErrorId : MissingOpenParenthesisAfterKeyword\r\n \r\n"
+    },
+    {
+      "event": "Stop",
+      "matcher": null,
+      "argv": [
+        "powershell.exe",
+        "-NoProfile",
+        "-Command",
+        "for b in bash /bin/bash /usr/bin/bash /usr/local/bin/bash /opt/homebrew/bin/bash; do command -v \"$b\" >/dev/null 2>&1 || continue; D=\"${CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || D=\"$(ls -d \"${D%/*}\"/*/ 2>/dev/null | grep -E \"/[0-9]+[.][0-9]+[.][0-9]+/$\" | sort -V | tail -n1)\"; D=\"${D%/}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || exit 0; exec \"$b\" \"$D/hooks/python-launcher.sh\" \"$D/hooks/run.py\" hooks/stop_runner.py; done; exit 0"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "No linha:1 caractere:4\r\n+ for b in bash /bin/bash /usr/bin/bash /usr/local/bin/bash /opt/homebr ...\r\n+    ~\r\n'(' de abertura ausente ap�s a palavra-chave 'for'.\r\nNo linha:1 caractere:85\r\n+ ...  /usr/bin/bash /usr/local/bin/bash /opt/homebrew/bin/bash; do command ...\r\n+                                                                  ~\r\nCorpo de instru��o ausente no loop do.\r\nNo linha:1 caractere:118\r\n+ ... /opt/homebrew/bin/bash; do command -v \"$b\" >/dev/null 2>&1 || continu ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\nNo linha:1 caractere:159\r\n+ ... $b\" >/dev/null 2>&1 || continue; D=\"${CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/ ...\r\n+                                                                  ~\r\nNome de tipo ausente depois de '['.\r\nNo linha:1 caractere:195\r\n+ ... CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || D=\"$(ls ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\nNo linha:1 caractere:311\r\n+ ... ]+[.][0-9]+[.][0-9]+/$\" | sort -V | tail -n1)\"; D=\"${D%/}\"; [ -r \"$D/ ...\r\n+                                                                  ~\r\nNome de tipo ausente depois de '['.\r\nNo linha:1 caractere:347\r\n+ ... il -n1)\"; D=\"${D%/}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || exit 0; ...\r\n+                                                                ~~\r\nO token '||' n�o � um separador de instru��es v�lido nesta vers�o.\r\n    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException\r\n    + FullyQualifiedErrorId : MissingOpenParenthesisAfterKeyword\r\n \r\n"
+    }
+  ],
+  "wsl_alias": {
+    "argv": [
+      "C:\\Users\\marco\\AppData\\Local\\Microsoft\\WindowsApps\\bash.exe",
+      "--version"
+    ],
+    "exit_code": 1,
+    "stdout": "Subsistema do Windows para Linux não tem distribuições instaladas.\r\nVocê pode resolve isso instalando uma distribuição com as instruções abaixo:\r\n\r\nUse 'wsl.exe --list --online' para listar distribuições disponíveis\r\ne 'wsl.exe --install <Distro>' para instalar.\r\n",
+    "stderr": ""
+  },
+  "git_bash_version": {
+    "argv": [
+      "C:\\Program Files\\Git\\bin\\bash.exe",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "GNU bash, version 5.2.37(1)-release (x86_64-pc-msys)\nCopyright (C) 2022 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\n\nThis is free software; you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n",
+    "stderr": ""
+  },
+  "git_bash_configured_command": {
+    "argv": [
+      "C:\\Program Files\\Git\\bin\\bash.exe",
+      "-c",
+      "for b in bash /bin/bash /usr/bin/bash /usr/local/bin/bash /opt/homebrew/bin/bash; do command -v \"$b\" >/dev/null 2>&1 || continue; D=\"${CLAUDE_PLUGIN_ROOT}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || D=\"$(ls -d \"${D%/*}\"/*/ 2>/dev/null | grep -E \"/[0-9]+[.][0-9]+[.][0-9]+/$\" | sort -V | tail -n1)\"; D=\"${D%/}\"; [ -r \"$D/hooks/python-launcher.sh\" ] || exit 0; exec \"$b\" \"$D/hooks/python-launcher.sh\" \"$D/hooks/run.py\" skills/token-optimizer/scripts/bash_hook.py --quiet; done; exit 0"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"allow\", \"updatedInput\": {\"command\": \"for b in bash /bin/bash /usr/bin/bash /usr/local/bin/bash /opt/homebrew/bin/bash; do command -v \\\"$b\\\" >/dev/null 2>&1 && export CLAUDE_SESSION_ID=indoor-launcher-probe && exec \\\"$b\\\" 'C:\\\\Users\\\\marco\\\\.codex\\\\plugins\\\\cache\\\\alexgreensh-token-optimizer\\\\token-optimizer\\\\5.13.12\\\\hooks\\\\python-launcher.sh' 'C:\\\\Users\\\\marco\\\\.codex\\\\plugins\\\\cache\\\\alexgreensh-token-optimizer\\\\token-optimizer\\\\5.13.12\\\\skills\\\\token-optimizer\\\\scripts\\\\bash_compress.py' git status --short; done; git status --short\"}}}\r\n",
+    "stderr": ""
+  }
+}
