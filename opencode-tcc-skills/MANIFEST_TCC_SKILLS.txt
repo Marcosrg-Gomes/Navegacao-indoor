@@ -1,0 +1,24 @@
+# Manifesto de arquivos criados por setup_opencode_tcc.bat
+# Gerado em: 2026-10-24 22:00:30
+# Somente os itens abaixo foram criados pelo script. Uma remocao segura futura deve se limitar a eles,
+# e apenas se o SHA256 do arquivo ainda for o registrado (arquivo nao editado).
+STATUS=COMPLETO
+BASE=C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub
+ROOT=C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills
+FILE|b6b24821b2bd766a21554416f95620bce42ac58bfb7991573ce6f7aa5730a7b5|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-repo-audit\SKILL.md
+FILE|4ccc13ea9d32d1ff8992d9f6f9f7c2828d1e754ad19b54874fd0775f9ed884e0|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-safe-development\SKILL.md
+FILE|4c1a4ea76c79fc84d6916ca7f37c906339e5d4d6f01b7f583506cfdf44a80f65|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-tests-ci\SKILL.md
+FILE|c4590d2946d69f52213a7b65fdca8c4b8b89f64183dbf8980a3afd96c505d567|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-fastapi-security\SKILL.md
+FILE|d96409b097f105d2f9502c3cc5dcbf6aad418179b002108fbc59583051cac125|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-frontend-playwright\SKILL.md
+FILE|5f5c661d1261fe84265362abc5c223bf3a9641267cff99ae5da7bf73ccf5a435|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-blender-3d\SKILL.md
+FILE|9241140aaf541f143ab37d392102c80c31413313873ebc359cf3a1d8ab0f295f|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-academic-docs\SKILL.md
+FILE||C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\MANIFEST_TCC_SKILLS.txt
+DIR|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-academic-docs
+DIR|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-blender-3d
+DIR|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-frontend-playwright
+DIR|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-fastapi-security
+DIR|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-tests-ci
+DIR|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-safe-development
+DIR|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills\tcc-repo-audit
+DIR|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills\skills
+DIR|C:\Users\marco\OneDrive\Documentos\SENAI\Navegacao-indoor-GitHub\opencode-tcc-skills

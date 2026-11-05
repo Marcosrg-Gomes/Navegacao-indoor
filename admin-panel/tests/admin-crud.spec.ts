@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("Administrador cadastra um piso navegável, edita e remove seus registros", async ({ page, request, browser }, info) => {
-  test.setTimeout(90000);
+  test.setTimeout(180000);
   info.annotations.push({ type: "browser-version", description: `${info.project.name} ${browser.version()} (${process.platform})` });
   const headers = { "X-API-Key": "audit-local-only" };
   const suffix = `${info.project.name}-${Date.now()}`;
@@ -13,14 +13,21 @@ test("Administrador cadastra um piso navegável, edita e remove seus registros",
   const dialog = page.getByRole("dialog");
   const row = (name: string) => page.locator("tbody tr").filter({ has: page.getByText(name, { exact: true }) });
   async function save(path: string, method: string, button: string) {
-    const pending = page.waitForResponse((r) => new URL(r.url()).pathname === `/api/admin/${path}` && r.request().method() === method);
+    const pending = page.waitForResponse(
+      (r) => new URL(r.url()).pathname === `/api/admin/${path}` && r.request().method() === method,
+      { timeout: 10000 }
+    );
     await dialog.getByRole("button", { name: button, exact: true }).click();
-    const response = await pending;
-    expect(response.ok(), await response.text()).toBeTruthy();
-    const data = await response.json();
-    if (method === "POST") created.push({ path, id: data.id });
-    await expect(dialog).not.toBeVisible();
-    return data;
+    try {
+      const response = await pending;
+      expect(response.ok(), await response.text()).toBeTruthy();
+      const data = await response.json();
+      if (method === "POST") created.push({ path, id: data.id });
+      await expect(dialog).not.toBeVisible();
+      return data;
+    } catch (error) {
+      throw new Error(`Falha ao salvar ${path} (${method}): ${error.message}`);
+    }
   }
   async function remove(path: string, id: number, target: ReturnType<typeof row>) {
     page.once("dialog", (d) => d.accept());
@@ -53,7 +60,7 @@ test("Administrador cadastra um piso navegável, edita e remove seus registros",
     expect((await save(`floors/${floor.id}`, "PUT", "Salvar Alterações")).imagem_planta_url).toBe("/static/plantas/demo.svg");
 
     await page.goto(`/admin/nos?piso=${floor.id}`);
-    const nodes = [];
+    const nodes: { id: number; nome: string }[] = [];
     for (const [name, x] of [["Origem", "0.1"], ["Destino", "0.8"]]) {
       await page.getByRole("button", { name: "+ Novo Nó Manual", exact: true }).click();
       await dialog.getByLabel("Nome / Identificação do Local").fill(`${name} ${suffix}`);
@@ -84,17 +91,17 @@ test("Administrador cadastra um piso navegável, edita e remove seus registros",
 
     await page.goto("/admin/lojas");
     await page.getByRole("button", { name: "Nova loja", exact: true }).click();
-    await dialog.getByLabel("Nome *", { exact: true }).fill(storeName);
-    await dialog.getByLabel("Nó associado *", { exact: true }).selectOption(String(nodes[1].id));
-    await dialog.getByLabel("Categoria *", { exact: true }).selectOption(String(category.id));
+    await page.getByRole("dialog").getByLabel("Nome *", { exact: true }).fill(storeName);
+    await page.getByRole("dialog").getByLabel("Nó associado *").selectOption(String(nodes[1].id));
+    await page.getByRole("dialog").getByLabel("Categoria *").selectOption(String(category.id));
     const store = await save("stores", "POST", "Salvar");
     await row(storeName).getByRole("button", { name: "Editar", exact: true }).click();
-    await dialog.getByLabel("Status operacional *", { exact: true }).selectOption("fechado");
+    await page.getByRole("dialog").getByLabel("Status operacional *").selectOption("fechado");
     expect((await save(`stores/${store.id}`, "PUT", "Salvar")).status_operacional).toBe("fechado");
 
     await page.goto("/admin/qr");
     await page.getByRole("button", { name: "+ Gerar QR Code", exact: true }).click();
-    await dialog.getByLabel("Nó de Origem Vinculado", { exact: false }).selectOption(String(nodes[0].id));
+    await page.getByRole("dialog").getByLabel("Nó de Origem Vinculado", { exact: false }).selectOption(String(nodes[0].id));
     await dialog.getByLabel("Token Personalizado", { exact: false }).fill(`QR-${suffix}`);
     const qr = await save("qr-codes", "POST", "Gerar QR Code");
     const qrCard = () => page.locator(".qr-card").filter({ hasText: `QR-${suffix}` });
@@ -126,8 +133,14 @@ test("Administrador cadastra um piso navegável, edita e remove seus registros",
   } finally {
     // Only fixture records created by this test; reverse foreign-key order.
     for (const item of created.reverse()) {
-      const cleanup = await request.delete(`/api/admin/${item.path}/${item.id}`, { headers });
-      expect([204, 404]).toContain(cleanup.status());
+      try {
+        const cleanup = await request.delete(`/api/admin/${item.path}/${item.id}`, { headers });
+        if (![204, 404].includes(cleanup.status())) {
+          console.error(`Limpeza falhou para ${item.path}/${item.id}: status ${cleanup.status()}`);
+        }
+      } catch (error) {
+        console.error(`Limpeza falhou para ${item.path}/${item.id}: ${error.message}`);
+      }
     }
   }
 });

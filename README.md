@@ -12,8 +12,8 @@ participantes estão definidos em [IMPLEMENTACAO_OFICIAL.md](IMPLEMENTACAO_OFICI
 ## Requisitos
 
 - Python 3.11+
-- MySQL 8.x
 - Node.js e npm para mobile e painel admin (revisão executada com Node.js 24.12.0)
+- MySQL 8.x: necessário apenas para a homologação de produção. Os testes automatizados locais usam SQLite em memória por padrão.
 
 ## Setup do Backend
 
@@ -69,7 +69,7 @@ cd backend
 pytest tests/ -v
 ```
 
-Os testes Python usam SQLite em memória. Não comprovam a persistência em MySQL exigida para o ambiente de produção.
+Os testes Python usam SQLite em memória por padrão. Não comprovam a persistência em MySQL exigida para o ambiente de produção. A homologação MySQL ainda está pendente e o procedimento está documentado em `evidence/homologacao-final-20261030/roteiro-homologacao-mysql.md`.
 
 ## Aplicativo e painel administrativo
 

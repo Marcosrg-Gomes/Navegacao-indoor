@@ -1,0 +1,353 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/admin-crud.spec.ts",
+      "tests/multiuser.spec.ts",
+      "tests/performance.spec.ts",
+      "--project=chromium"
+    ],
+    "configFile": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\playwright.config.ts",
+    "rootDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/e2e-20261026-224500-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/e2e-20261026-224500-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/e2e-20261026-224500-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/e2e-20261026-224500-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/e2e-20261026-224500-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "msedge",
+        "name": "msedge",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../evidence/e2e-20261026-224500-browser-tests.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "admin-crud.spec.ts",
+      "file": "admin-crud.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Administrador cadastra um piso navegável, edita e remove seus registros",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "browser-version",
+                  "description": "chromium 153.0.8010.12 (win32)"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 90854,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 90000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\admin-crud.spec.ts",
+                        "column": 43,
+                        "line": 129
+                      },
+                      "message": "Error: apiRequestContext.delete: Target page, context or browser has been closed\n\n  127 |     // Only fixture records created by this test; reverse foreign-key order.\n  128 |     for (const item of created.reverse()) {\n> 129 |       const cleanup = await request.delete(`/api/admin/${item.path}/${item.id}`, { headers });\n      |                                           ^\n  130 |       expect([204, 404]).toContain(cleanup.status());\n  131 |     }\n  132 |   }\n    at C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\admin-crud.spec.ts:129:43"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T01:24:19.351Z",
+                  "annotations": [
+                    {
+                      "type": "browser-version",
+                      "description": "chromium 153.0.8010.12 (win32)"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\e2e-20261026-224500-browser-artifacts\\admin-crud-Administrador-c-75a67-ita-e-remove-seus-registros-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\e2e-20261026-224500-browser-artifacts\\admin-crud-Administrador-c-75a67-ita-e-remove-seus-registros-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fd8ad0f406f90b8c1a36-9e75bbbecf00348102ff",
+          "file": "admin-crud.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "multiuser.spec.ts",
+      "file": "multiuser.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "RNF03: cinco visitantes simultâneos carregam mapa e calculam rota",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4359,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T01:25:51.614Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "five-simultaneous-visitors",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJ2aXNpdG9yIjogMSwKICAgICJtYXBNcyI6IDIyNTIsCiAgICAicm91dGVNcyI6IDQ1OAogIH0sCiAgewogICAgInZpc2l0b3IiOiAyLAogICAgIm1hcE1zIjogMjI4OSwKICAgICJyb3V0ZU1zIjogNDQ4CiAgfSwKICB7CiAgICAidmlzaXRvciI6IDMsCiAgICAibWFwTXMiOiAyMjU2LAogICAgInJvdXRlTXMiOiA1ODAKICB9LAogIHsKICAgICJ2aXNpdG9yIjogNCwKICAgICJtYXBNcyI6IDIyODQsCiAgICAicm91dGVNcyI6IDM3NwogIH0sCiAgewogICAgInZpc2l0b3IiOiA1LAogICAgIm1hcE1zIjogMjE3MSwKICAgICJyb3V0ZU1zIjogNDQzCiAgfQpd"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dc93e1701c202dc2d5ba-a798c4e80b9015b25b96",
+          "file": "multiuser.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "performance.spec.ts",
+      "file": "performance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "RNF03: mapa visível e rota em 4G simulado",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 20833,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1000\u001b[39m\nReceived:    \u001b[31m1550\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1000\u001b[39m\nReceived:    \u001b[31m1550\u001b[39m\n    at C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\performance.spec.ts:41:28",
+                    "location": {
+                      "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\performance.spec.ts",
+                      "column": 28,
+                      "line": 41
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 39 |\u001b[39m   \u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m sample \u001b[36mof\u001b[39m samples) {\n \u001b[90m 40 |\u001b[39m     expect(sample\u001b[33m.\u001b[39mmapMs)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(\u001b[35m3000\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m     expect(sample\u001b[33m.\u001b[39mrouteMs)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(\u001b[35m1000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m   }\n \u001b[90m 43 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 44 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\performance.spec.ts",
+                        "column": 28,
+                        "line": 41
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1000\u001b[39m\nReceived:    \u001b[31m1550\u001b[39m\n\n  39 |   for (const sample of samples) {\n  40 |     expect(sample.mapMs).toBeLessThanOrEqual(3000);\n> 41 |     expect(sample.routeMs).toBeLessThanOrEqual(1000);\n     |                            ^\n  42 |   }\n  43 | });\n  44 |\n    at C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\performance.spec.ts:41:28"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "RNF03 [{\"mapMs\":1962,\"routeMs\":756},{\"mapMs\":1951,\"routeMs\":631},{\"mapMs\":2241,\"routeMs\":1550},{\"mapMs\":2242,\"routeMs\":664},{\"mapMs\":2118,\"routeMs\":661}]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T01:25:56.173Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\e2e-20261026-224500-browser-artifacts\\performance-RNF03-mapa-visível-e-rota-em-4G-simulado-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\e2e-20261026-224500-browser-artifacts\\performance-RNF03-mapa-visível-e-rota-em-4G-simulado-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\performance.spec.ts",
+                    "column": 28,
+                    "line": 41
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b15d6361b2fc38288977-becca3b2403fce45909c",
+          "file": "performance.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T01:24:18.442Z",
+    "duration": 119496.889,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

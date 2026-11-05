@@ -21,7 +21,7 @@ Nesta retomada foram inspecionados os relatórios, seus anexos e o código corre
 | RF05–RF06, RN02, RN06, RN09 | Busca parcial, categorias e status operacional verificados no E2E e `test_audit.py` | Cobertura de navegadores limitada à matriz abaixo |
 | RF07, RN03–RN04 | Dijkstra, conectividade, erros e separação entre shoppings: código e testes da API/motor | Fixtures pequenas em SQLite; não são homologação de produção |
 | RF10–RF11 | Detalhes do POI e aviso de chegada cobertos pelo fluxo E2E | Chegada confirmada pelo botão do visitante; não há posicionamento contínuo |
-| RF12 | CRUD implementado; testes de API, autenticação, referências, upload e validação do grafo; painel com E2E de arestas/QR/refresh | E2E não cobre cada operação CRUD de todas as telas; persistência MySQL pendente |
+| RF12 | CRUD implementado; testes de API, autenticação, referências, upload e validação do grafo; painel com E2E de arestas/QR/refresh | E2E cobre cadastro e atualização de pisos, lojas, nós, arestas e QR Codes em Chromium, Firefox e WebKit; persistência MySQL pendente |
 | RF13, RN07, RN11 | Ciclo bloquear → rota alternativa → reativar em cinco alvos; nó intermediário inativo coberto em Python | Recálculo acionado por “Recalcular”; não há evidência de atualização automática por push |
 | RN05 | Rota entre pisos na fixture, com transição por elevador; escada/elevador/acessibilidade testados na API | Não é demonstração presencial em edifício |
 | RN10 | Fixture pequena compatível com o recorte MVP | A presença de dois pisos não dispensa RN05 |

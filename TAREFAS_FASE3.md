@@ -86,7 +86,7 @@ admin-panel/
 - `POST /api/admin/floors/{id}/upload-planta`: Recebe arquivos de imagem (.png, .jpg, .svg, .webp), armazena em `backend/app/static/plantas/` e atualiza a URL da planta do piso.
 - `app.mount("/static", StaticFiles(directory=static_dir), name="static")`
 - `app.mount("/admin", StaticFiles(directory=admin_dist, html=True), name="admin")`
-- Cobertura de testes automatizados adicionada em `tests/test_api.py` para upload e montagem estática (22 testes passando).
+- Cobertura de testes automatizados para upload de planta e montagem de estáticos. A suíte completa de testes Python (`pytest backend/tests/`) executa 88 testes aprovados e 1 ignorado (homologação MySQL não configurada), conforme execução registrada na auditoria.
 
 ---
 

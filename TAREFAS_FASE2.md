@@ -82,8 +82,8 @@ mobile/
 
 Todos os endpoints da API desenvolvida na Fase 1 são consumidos pelo app:
 - `GET /api/shoppings`: Listagem dos shoppings cadastrados
-- `GET /api/pisos?shopping_id=...`: Pisos disponíveis
-- `GET /api/grafo?piso_id=...`: Malha completa de nós e arestas para renderização
-- `GET /api/pois?q=...&categoria_id=...`: Busca e catálogo de pontos de interesse
-- `GET /api/rotas?no_origem_id=...&no_destino_id=...&acessivel=...`: Cálculo de rota ótima (Dijkstra)
-- `GET /api/qrcode/{token}`: Resolução do ponto de partida a partir do código escaneado
+- `GET /api/shoppings/{shopping_id}/floors`: Pisos disponíveis de um shopping
+- `GET /api/floors/{piso_id}/graph`: Malha completa de nós e arestas para renderização
+- `GET /api/pois?q=...&categoria_id=...&shopping_id=...&piso_id=...`: Busca e catálogo de pontos de interesse
+- `POST /api/routes`: Cálculo de rota ótima (Dijkstra) via JSON no corpo da requisição
+- `GET /api/qr-codes/{token}`: Resolução do ponto de partida a partir do código escaneado

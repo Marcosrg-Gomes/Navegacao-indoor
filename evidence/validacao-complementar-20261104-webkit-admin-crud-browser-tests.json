@@ -1,0 +1,231 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/admin-crud.spec.ts",
+      "--project",
+      "webkit"
+    ],
+    "configFile": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\playwright.config.ts",
+    "rootDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/validacao-complementar-20261104-webkit-admin-crud-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/validacao-complementar-20261104-webkit-admin-crud-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/validacao-complementar-20261104-webkit-admin-crud-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/validacao-complementar-20261104-webkit-admin-crud-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/validacao-complementar-20261104-webkit-admin-crud-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "msedge",
+        "name": "msedge",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../evidence/validacao-complementar-20261104-webkit-admin-crud-browser-tests.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "admin-crud.spec.ts",
+      "file": "admin-crud.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Administrador cadastra um piso navegável, edita e remove seus registros",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 180000,
+              "annotations": [
+                {
+                  "type": "browser-version",
+                  "description": "webkit 26.6 (win32)"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 17979,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Grafo 100% Íntegro e Conexo', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Grafo 100% Íntegro e Conexo', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Grafo 100% Íntegro e Conexo', { exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Grafo 100% Íntegro e Conexo', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Grafo 100% Íntegro e Conexo', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Grafo 100% Íntegro e Conexo', { exact: true })\u001b[22m\n\n    at C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\admin-crud.spec.ts:117:82",
+                    "location": {
+                      "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\admin-crud.spec.ts",
+                      "column": 82,
+                      "line": 117
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 115 |\u001b[39m     expect((\u001b[36mawait\u001b[39m route\u001b[33m.\u001b[39mjson())\u001b[33m.\u001b[39mdistancia_total_metros)\u001b[33m.\u001b[39mtoBe(\u001b[35m70\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 116 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`/admin/validacao?piso=${floor.id}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 117 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m\"Grafo 100% Íntegro e Conexo\"\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 118 |\u001b[39m\n \u001b[90m 119 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/admin/qr\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 120 |\u001b[39m     \u001b[36mawait\u001b[39m remove(\u001b[32m\"qr-codes\"\u001b[39m\u001b[33m,\u001b[39m qr\u001b[33m.\u001b[39mid\u001b[33m,\u001b[39m qrCard())\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\admin-crud.spec.ts",
+                        "column": 82,
+                        "line": 117
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Grafo 100% Íntegro e Conexo', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Grafo 100% Íntegro e Conexo', { exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Grafo 100% Íntegro e Conexo', { exact: true })\u001b[22m\n\n\n  115 |     expect((await route.json()).distancia_total_metros).toBe(70);\n  116 |     await page.goto(`/admin/validacao?piso=${floor.id}`);\n> 117 |     await expect(page.getByText(\"Grafo 100% Íntegro e Conexo\", { exact: true })).toBeVisible();\n      |                                                                                  ^\n  118 |\n  119 |     await page.goto(\"/admin/qr\");\n  120 |     await remove(\"qr-codes\", qr.id, qrCard());\n    at C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\admin-crud.spec.ts:117:82"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-04T01:28:51.285Z",
+                  "annotations": [
+                    {
+                      "type": "browser-version",
+                      "description": "webkit 26.6 (win32)"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\validacao-complementar-20261104-webkit-admin-crud-browser-artifacts\\admin-crud-Administrador-c-75a67-ita-e-remove-seus-registros-webkit\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\validacao-complementar-20261104-webkit-admin-crud-browser-artifacts\\admin-crud-Administrador-c-75a67-ita-e-remove-seus-registros-webkit\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\admin-crud.spec.ts",
+                    "column": 82,
+                    "line": 117
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fd8ad0f406f90b8c1a36-07cec846d47792d9231d",
+          "file": "admin-crud.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-04T01:28:50.619Z",
+    "duration": 19184.35,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -2,12 +2,14 @@
   "config": {
     "argv": [
       "C:\\Program Files\\nodejs\\node.exe",
-      "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor\\admin-panel\\node_modules\\@playwright\\test\\cli.js",
+      "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\node_modules\\@playwright\\test\\cli.js",
       "test",
-      "--project=chromium"
+      "tests/performance.spec.ts",
+      "--project",
+      "chromium"
     ],
-    "configFile": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor\\admin-panel\\playwright.config.ts",
-    "rootDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/tests",
+    "configFile": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\playwright.config.ts",
+    "rootDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
     "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
@@ -23,7 +25,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/test-results",
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/final-browser-artifacts",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -31,7 +33,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/tests",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -39,7 +41,7 @@
         "timeout": 45000
       },
       {
-        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/test-results",
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/final-browser-artifacts",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -47,7 +49,7 @@
         },
         "id": "firefox",
         "name": "firefox",
-        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/tests",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -55,7 +57,7 @@
         "timeout": 45000
       },
       {
-        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/test-results",
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/final-browser-artifacts",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -63,7 +65,39 @@
         },
         "id": "webkit",
         "name": "webkit",
-        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor/admin-panel/tests",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/final-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/evidence/final-browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "msedge",
+        "name": "msedge",
+        "testDir": "C:/Users/marco/OneDrive/Documentos/SENAI/Navegacao-indoor-GitHub/admin-panel/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -98,184 +132,6 @@
   },
   "suites": [
     {
-      "title": "navigation.spec.ts",
-      "file": "navigation.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "QR → mapa → busca → rota → chegada; bloqueio administrativo muda a rota",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 45000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 7059,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-09-09T02:03:33.750Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "5d2868f7d23420c27cca-e14124b6d818d24ef1de",
-          "file": "navigation.spec.ts",
-          "line": 5,
-          "column": 1
-        },
-        {
-          "title": "Scanner manual, QR inválido, aviso de manutenção e categorias cadastradas",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 45000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1738,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-09-09T02:03:41.290Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "5d2868f7d23420c27cca-9f5e485f2606b74ac02e",
-          "file": "navigation.spec.ts",
-          "line": 44,
-          "column": 1
-        },
-        {
-          "title": "Mapa entre pisos e layout sem overflow em 360 e 414 pixels",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 45000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2806,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-09-09T02:03:43.042Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "5d2868f7d23420c27cca-807aab2d81d2a4cf85a4",
-          "file": "navigation.spec.ts",
-          "line": 64,
-          "column": 1
-        },
-        {
-          "title": "Falhas de rede têm mensagem e permitem repetir a busca",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 45000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1022,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-09-09T02:03:45.861Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "5d2868f7d23420c27cca-72caae1a4639e99f14c1",
-          "file": "navigation.spec.ts",
-          "line": 83,
-          "column": 1
-        },
-        {
-          "title": "Painel responsivo, refresh de rota e edição de QR disponíveis",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 45000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 788,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-09-09T02:03:46.896Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "5d2868f7d23420c27cca-f3051cbad4c5abda51af",
-          "file": "navigation.spec.ts",
-          "line": 94,
-          "column": 1
-        }
-      ]
-    },
-    {
       "title": "performance.spec.ts",
       "file": "performance.spec.ts",
       "column": 0,
@@ -283,7 +139,7 @@
       "specs": [
         {
           "title": "RNF03: mapa visível e rota em 4G simulado",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -296,22 +152,48 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 20405,
-                  "errors": [],
-                  "stdout": [
+                  "status": "failed",
+                  "duration": 4363,
+                  "error": {
+                    "message": "Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile 'C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\final-browser-artifacts\\.playwright-artifacts-0\\traces\\b15d6361b2fc38288977-becca3b2403fce45909c-recording1.network' -> 'C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\final-browser-artifacts\\.playwright-artifacts-0\\traces\\b15d6361b2fc38288977-becca3b2403fce45909c-recording1-pwnetcopy-1.network'",
+                    "stack": "Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile 'C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\final-browser-artifacts\\.playwright-artifacts-0\\traces\\b15d6361b2fc38288977-becca3b2403fce45909c-recording1.network' -> 'C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\final-browser-artifacts\\.playwright-artifacts-0\\traces\\b15d6361b2fc38288977-becca3b2403fce45909c-recording1-pwnetcopy-1.network'\n    at C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\performance.spec.ts:32:19",
+                    "location": {
+                      "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\performance.spec.ts",
+                      "column": 19,
+                      "line": 32
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 30 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m\"route-panel\"\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m     samples\u001b[33m.\u001b[39mpush({ mapMs\u001b[33m:\u001b[39m \u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mround(mapMs)\u001b[33m,\u001b[39m routeMs\u001b[33m:\u001b[39m \u001b[33mDate\u001b[39m\u001b[33m.\u001b[39mnow() \u001b[33m-\u001b[39m start })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m     \u001b[36mawait\u001b[39m context\u001b[33m.\u001b[39mclose()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m   }\n \u001b[90m 34 |\u001b[39m   mkdirSync(\u001b[32m\"../evidence\"\u001b[39m\u001b[33m,\u001b[39m { recursive\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 35 |\u001b[39m   writeFileSync(\u001b[32m`../evidence/performance-${process.env.AUDIT_PHASE || \"after\"}.json`\u001b[39m\u001b[33m,\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "text": "RNF03 [{\"mapMs\":2218,\"routeMs\":756},{\"mapMs\":2197,\"routeMs\":686},{\"mapMs\":2222,\"routeMs\":656},{\"mapMs\":2102,\"routeMs\":649},{\"mapMs\":2200,\"routeMs\":672}]\n"
+                      "location": {
+                        "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\performance.spec.ts",
+                        "column": 19,
+                        "line": 32
+                      },
+                      "message": "Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile 'C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\final-browser-artifacts\\.playwright-artifacts-0\\traces\\b15d6361b2fc38288977-becca3b2403fce45909c-recording1.network' -> 'C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\final-browser-artifacts\\.playwright-artifacts-0\\traces\\b15d6361b2fc38288977-becca3b2403fce45909c-recording1-pwnetcopy-1.network'\n\n  30 |     await expect(page.getByTestId(\"route-panel\")).toBeVisible();\n  31 |     samples.push({ mapMs: Math.round(mapMs), routeMs: Date.now() - start });\n> 32 |     await context.close();\n     |                   ^\n  33 |   }\n  34 |   mkdirSync(\"../evidence\", { recursive: true });\n  35 |   writeFileSync(`../evidence/performance-${process.env.AUDIT_PHASE || \"after\"}.json`, JSON.stringify({\n    at C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\performance.spec.ts:32:19"
+                    },
+                    {
+                      "message": "Error: browserContext._wrapApiCall: ENOENT: no such file or directory, open 'C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\final-browser-artifacts\\.playwright-artifacts-0\\traces\\b15d6361b2fc38288977-becca3b2403fce45909c.network'"
+                    },
+                    {
+                      "message": "Error: ENOENT: no such file or directory, open 'C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\evidence\\final-browser-artifacts\\.playwright-artifacts-0\\06c66defa33462678df7c3a921dd1e51.zip'"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-09-09T02:03:47.711Z",
+                  "startTime": "2026-10-31T02:22:48.973Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\marco\\OneDrive\\Documentos\\SENAI\\Navegacao-indoor-GitHub\\admin-panel\\tests\\performance.spec.ts",
+                    "column": 19,
+                    "line": 32
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "b15d6361b2fc38288977-becca3b2403fce45909c",
@@ -324,11 +206,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-09-09T02:03:33.045Z",
-    "duration": 35346.771,
-    "expected": 6,
+    "startTime": "2026-10-31T02:22:48.248Z",
+    "duration": 5426.831999999999,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
